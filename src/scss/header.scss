@@ -1,0 +1,81 @@
+.header {
+	&__container {
+	}
+	&__top {
+		display: flex;
+		align-items: center;
+		padding: rem(34) rem(15);
+		@media (max-width:$tablet){
+			flex-wrap: wrap;
+			padding: rem(34) rem(100);
+			justify-content: space-between;
+		}
+		@media (max-width:$mobile){
+			margin: 0 auto;
+			padding: rem(17);
+			max-width: rem(574);
+		}
+	}
+	&__logo {
+		margin-right: rem(80);
+		@media (max-width:$tablet){
+			max-height: rem(14);
+	  }
+	}
+	.menu-nav {
+		display: flex;
+		align-items: center;
+		flex: 1 1 auto;
+		@media (max-width:$mobile){
+			margin: 0 auto;
+			max-width: rem(540);
+		}
+		&__list {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			@media (min-width:$tablet){
+				 margin-right: rem(208); 
+			}
+		}
+		&__item {
+			&:not(:last-child) {
+				margin-right: rem(32);
+			}
+		}
+		&__link {
+			color: $mainColor;
+			white-space: nowrap;
+			@media (max-width:$mobile){
+				font-size: rem(16);
+			}
+		}
+
+	}		
+	&__search {
+		cursor: pointer;
+	}
+	&__bottom {
+		&::-webkit-scrollbar {
+			display: none;
+		}
+		&::-webkit-scrollbar-track  {
+			background-color: transparent;
+		}
+		&::-webkit-scrollbar-thumb {
+			background-color: transparent;    /* цвет плашки */
+			border-radius: 20px;       /* закругления плашки */
+			border: 1px solid transparent; 
+		}
+		@media (max-width:$tablet){
+			padding: rem(22) rem(100);
+			width: 100%;
+			border-top: 1px solid #E6E8EC;
+			border-bottom: 1px solid #E6E8EC;
+	  }
+	  	@media (max-width:$mobile){
+			padding: rem(17) rem(32);
+			overflow-x: auto;
+		}
+	}
+}

@@ -1,0 +1,12 @@
+html 
+	- locals.title = "Главная"
+		include html/_head
+		body 
+			.wrapper
+				include html/_header
+				main.main-content
+					include html/_hero
+					include html/_podcasts
+					include html/_show
+				include html/_footer
+			script(src="js/app.min.js")
