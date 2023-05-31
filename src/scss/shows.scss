@@ -1,0 +1,206 @@
+.shows {
+	&__container {
+		display: flex;
+		padding: rem(94) rem(15);		
+		@media (max-width:$tablet){
+			max-width: rem(824);
+		}
+		@media (max-width:$mobile){
+			  flex-direction: column-reverse;
+			  max-width: rem(540);
+		}
+		@media (max-width:$mobileSmall) {
+			padding: rem(54) rem(15);
+		}
+	}
+	.shows {
+		&__content {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			align-items: flex-start;
+			flex: 1 1 auto;
+			margin-right: rem(30);
+		}
+		&__list {
+			display: flex;
+			flex-wrap: wrap;
+		}
+	}
+	.shows-content {
+		&__title {
+			color: #121723;
+			font-size: rem(48);
+			@media (max-width:$mobile) {
+				display: block;
+				margin: 0 auto rem(123);
+				width: rem(540);
+			}
+			@media (max-width:$mobileSmall) {
+				margin-bottom: rem(30);
+				font-size: rem(24);
+			}
+		}
+		@media (max-width:$mobile){
+			align-items: center;
+			flex-wrap: wrap;
+			margin-right: 0;
+			border-top: 1px solid #E6E8EC;
+		}
+	}
+	.inner-content {
+		@media (max-width:$mobile){
+			  display: flex;
+			  align-items: center;
+			  padding: rem(30) 0;
+		}
+		&__img {
+			display: flex;
+			flex: 1 1 auto;
+			margin-bottom: rem(24);
+			max-width: rem(65);
+			@media (max-width:$mobile){
+				display: inline-block;
+				margin-right: rem(20);
+				margin-bottom: 0;
+			}
+			@media (max-width:$mobileSmall) {
+				flex: 0 0 rem(77);
+				min-width: rem(77);
+				// min-height: rem(105);
+			}
+		}
+		&__button {
+			margin-bottom: rem(12);
+			@media (max-width:$mobile) {
+				margin-bottom: rem(8);
+			}
+			@media (max-width:$mobileSmall) {
+				margin-bottom: 0;
+			}
+		}
+		&__text {
+			color: #A1A6B4;
+			font-size: rem(16);
+			line-height: 1.5;
+			max-width: rem(255);		
+			@media (max-width:$mobileSmall) {
+				margin-bottom: rem(7);
+				font-size: rem(14);
+			}
+		}
+
+		&__wrap {
+			@media (max-width:$mobileSmall){
+				display: flex;
+				flex-direction: column-reverse;
+				align-items: flex-start;
+			}
+		}
+	}
+	.shows-list {
+		max-width: rem(825);
+		@media (max-width:$mobile) {
+			margin: 0 auto;
+			padding-bottom: rem(60);
+			max-width: rem(540);
+		}
+		&__item {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			justify-content: stretch;
+			align-items: center;
+			flex: 1 1 calc(100% / 3 - rem(60));
+			background-color: #fff;
+			overflow: hidden;
+			@media (min-width:$tablet){
+				&:not(:nth-child(3n)) {
+					margin-right: rem(30);
+				}
+			}
+			@media (max-width:$tablet){
+				&:not(:nth-child(2n)) {
+					margin-right: rem(30);
+				}
+			}
+			@media (min-width:$tablet) {
+				&:nth-child(-n+3) {
+					margin-bottom: rem(30);
+				}
+			}
+			@media (max-width:$tablet) {
+				&:nth-child(-n+4) {
+					margin-bottom: rem(30);
+				}
+			}
+
+			@media (max-width:$tablet){
+				flex: 1 1 calc(100% / 2 - rem(30));
+			}
+			@media (max-width:$mobile){
+				justify-content: center;
+				// flex: 1 1 auto;
+				max-width: rem(255);
+			}
+		}
+	}
+	.list-item {
+		&__desc {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			flex: 1 1 auto;
+			padding: rem(20) rem(16);
+			width: 100%;
+			border: 1px solid #E6E8EC;
+			@media (max-width:320px){
+				padding: rem(30) rem(16); 
+			}
+		}
+		&__img {
+			width: 100%;
+			// height: 100%;
+			@media (max-width:$mobile){
+				height: unset;
+			}
+			// background-repeat: no-repeat;
+			// background-size: cover;
+			// background-position: center;
+			@media (max-width:320px){
+				min-height: rem(72);
+				width: 100%;
+				object-fit: cover;
+		    }
+		}
+		&__label {
+			margin-bottom: rem(4);
+			font-weight: 500;
+			@media (max-width:$mobileSmall){
+				font-size: rem(12);
+			}
+		}
+		&__text {
+			margin-bottom: rem(20);
+			color: #a1a684;
+			font-size: rem(12);
+			@media (max-width:$mobileSmall){
+				font-size: rem(9);
+			}
+		}
+		&__link {
+			display: inline-flex;
+			align-items: center;
+			font-size: rem(16);
+			font-style: italic;
+			@media (max-width:$mobileSmall){
+				font-size: rem(12);
+				color: #6D31EE;			
+				svg path {
+					fill: #6D31EE;
+				}
+			}
+
+		}
+	}
+}
