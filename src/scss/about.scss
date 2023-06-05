@@ -184,15 +184,33 @@
 	.form-list {
 		display: flex;
 		flex-wrap: wrap;
+		input, textarea {
+			color: #fff;
+			background-color: transparent;
+			border: 1px solid #FFFFFF;
+			border-radius: rem(30);
+			transition: 0.3s all ease;
+			@media (any-hover: hover){
+				&:hover{
+					background-color: #292E39;
+				}
+			}
+			&:focus {
+				border-color: #AA9DFA;
+			}
+			&:active {
+				color: #fff;
+				border-color: #fff;
+			}
+		}
+		&::placeholder {
+			color: #A1A6B4;
+		}
 		&__text {
 			margin-bottom: rem(30);
 			padding: rem(30) rem(32);
 			width: 100%;
 			height: rem(150);
-			color: #A1A6B4;
-			background-color: transparent;
-			border: 1px solid #FFFFFF;
-			border-radius: rem(30);
 			resize: none;
 			@media (max-width:$mobileSmall){
 				 padding: rem(17) rem(24);
@@ -204,10 +222,6 @@
 			margin-right: rem(15);
 			padding: rem(25) rem(32);
 			width: calc(50% - rem(15));
-			color: #A1A6B4;
-			background-color: transparent;
-			border: 1px solid #FFFFFF;
-			border-radius: rem(30);
 			@media (max-width:$mobile){
 				margin-right: 0;
 				margin-bottom: rem(30);
@@ -221,18 +235,18 @@
 		}
 		&__email {
 			padding: rem(25) rem(32);
-			width: calc(50% - rem(15));
-			color: #A1A6B4;
-			background-color: transparent;
-			border: 1px solid #FFFFFF;
-			border-radius: rem(30);
-			@media (max-width:$mobile){
-				width: 100%;
-			}
+			width: 100%;
+			// width: calc(50% - rem(15));
+			// @media (max-width:$mobile){
+			// 	width: 100%;
+			// }
 			@media (max-width:$mobileSmall){
 				padding: rem(17) rem(24);
 				font-size: rem(16);
 				border-radius: rem(40);
+		   }
+		   &._form-error {
+			border-color: red;
 		   }
 		}
 		&__button {
@@ -243,9 +257,38 @@
 				font-size: rem(16);
 			}
 		}
+		&__wrapper {
+			position: relative;
+			width: calc(50% - rem(15));
+			@media (max-width:$mobile){
+				width: 100%;
+			}
+			@media (max-width:$mobileSmall){
+				// padding: rem(17) rem(24);
+				font-size: rem(16);
+				border-radius: rem(40);
+		   }
+		}
+		.form__error {
+			position: absolute;
+			top: rem(9);
+			left: rem(32);
+			color: red;
+			font-size: rem(12);
+		}
 		.chx {
 			position: relative;
 			width: 100%;
+			@media (any-hover: hover){
+				&:hover{
+					.chx__label {
+						color: #AA9DFA;
+						&::before{
+							border-color: #AA9DFA;
+						}
+					}
+				}
+			}
 			&__input {
     			position: absolute;
 				// top: 0;
@@ -269,6 +312,7 @@
 				color: #fff;
 				font-size: rem(12);
 				font-weight: 500;
+				transition: 0.3s color ease;
 				cursor: pointer;
 				@media (max-width:$mobileSmall){
 					font-size: rem(9);
@@ -282,6 +326,7 @@
 					width: rem(14);
 					height: rem(14);
 					border: 1px solid #fff;
+					transition: 0.3s border-color ease;
 				}
 				@media (max-width:$mobileSmall){
 					width: rem(13);
@@ -294,6 +339,9 @@
 					left: rem(2);
 					opacity: 0;
 					transition: 0.3s opacity ease;
+				}
+				&:focus {
+					
 				}
 			}
 		}

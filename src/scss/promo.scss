@@ -85,8 +85,11 @@
 				padding: rem(16) rem(13);
 				font-size: rem(16);
 			}
-			img {
+			svg {
 				margin-right: rem(8);
+				path {
+					transition: 0.3s all ease;
+				}
 			}
 		}
 	}

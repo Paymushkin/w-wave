@@ -76,7 +76,27 @@
 
 		}
 		&__icon {
-
+			outline: none;
+			@media (any-hover: hover){
+				&:hover{
+					path {
+						fill: #6D31EE;
+					}
+				}
+			}
+			&:focus {
+				path {
+					fill: #AA9DFA;
+				}
+			}
+			&:active {
+				path {
+					fill: #4F28A5;
+				}
+			}
+			path {
+				transition: 0.3s fill ease;
+			}
 		}
 	}
 	.menu-nav {
@@ -125,7 +145,23 @@
 
 		}
 		&__link {
+			margin: 0 rem(-2);
+			padding: rem(2);
 			color: #fff;
+			transition: 0.3s all ease;
+			outline: none;
+			@media (any-hover: hover){
+				&:hover{
+					color: #6D31EE;
+				}
+			}
+			&:focus {
+				color: #fff;
+				background-color: #AA9DFA;
+			}
+			&:active {
+				color: #4F28A5;
+			}
 		}
 	}
 }

@@ -9,14 +9,23 @@
 	color: #fff;
 	background-color: $mainHighlightColor;
 	border-radius: rem(40);
+	border: rem(2) solid $mainHighlightColor;
 	font-weight: 500;
 	text-align: center;
 	transition: 0.3s all ease;
-	// border: 3px solid  $mainHighlightColor;
 	@media (any-hover: hover) {
 		&:hover {
-
-		} 
+			background-color: #AA9DFA;
+		}
+	}
+	&:focus {
+		background-color: #AA9DFA;
+		border-color: #4F28A5;
+		outline: none;
+	}
+	&:active {
+		background-color: #4F28A5;
+		// border-color: #4F28A5;
 	}
 	&:disabled {
 		pointer-events: none;
@@ -31,11 +40,22 @@
 		// border-radius: rem(30);
 		color: #121723;
 		background-color: transparent;
-		border: 2px solid #121723;
+		border: rem(2) solid #121723;
 		@media (any-hover: hover) {
 			&:hover {
-
+				color: #fff;
+				background-color: #AA9DFA;
+				border-color: #AA9DFA;
 			}
+		}
+		&:focus {
+			color: #fff;
+			background-color: #AA9DFA;
+			border-color: #6D31EE;
+		}
+		&:active {
+			color: #fff;
+			background-color: #6D31EE;
 		}
 	}
 	&-violet {
@@ -44,6 +64,22 @@
 		background-color: transparent;
 		border: 2px solid  #AA9DFA;
 		font-size: rem(16);
+		@media (any-hover: hover) {
+			&:hover {
+				color: #fff;
+				background-color: #AA9DFA;
+			}
+		}
+		&:focus {
+			color: #fff;
+			background-color: #6D31EE;
+			border-color: #6D31EE;
+		}
+		&:active {
+			color: #fff;
+			background-color: #4F28A5;
+			border-color: #4F28A5;
+		}
 	}
 	&-buy {
 		padding: rem(25) rem(13);
@@ -51,5 +87,56 @@
 		background-color: transparent;
 		border: 2px solid #F0D288;
 		font-size: rem(20);
+		@media (any-hover: hover) {
+			&:hover {
+				color: #121723;
+				background-color: #F0D288;
+				svg {
+					path {
+						&:first-child{
+							fill: #121723;
+						}
+						&:nth-child(2) {
+							fill: #F0D288;
+						}
+					}
+					
+				}
+			}
+		}
+		&:focus {
+			color: #121723;
+			background-color: #BB973E;
+			border-color: #F0D288;
+			svg {
+				path {
+					&:first-child{
+						
+						fill: #F0D288;
+					}
+					&:nth-child(2) {
+						fill: #121723;
+					}
+				}
+				
+			}
+		}
+		&:active {
+			color: #121723;
+			background-color: #BB973E;
+			border-color: #BB973E;
+			svg {
+				path {
+					&:first-child{
+						
+						fill: #121723;
+					}
+					&:nth-child(2) {
+						fill: #BB973E;
+					}
+				}
+				
+			}
+		}
 	}
 }

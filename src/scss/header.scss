@@ -39,21 +39,74 @@
 			}
 		}
 		&__item {
+			cursor: pointer;
 			&:not(:last-child) {
 				margin-right: rem(32);
 			}
 		}
 		&__link {
+			position: relative;
 			color: $mainColor;
 			white-space: nowrap;
+			transition: 0.3s ease color;
+			&::after{
+				position: absolute;
+				content:'';
+				top: rem(-4);
+				left: rem(-8);
+				width: calc(100% + rem(20));
+				height: calc(100% + rem(8));
+				background-color: #AA9DFA;
+				opacity: 0;
+				transition: 0.3s opacity ease;
+				z-index: -1;
+			}
+
 			@media (max-width:$mobile){
 				font-size: rem(16);
+			}
+			@media (any-hover: hover){
+				&:hover{
+					color: #6D31EE;
+				}
+			}
+			&:focus {
+				color: #fff;
+				outline: none;
+				&::after{
+					opacity: 1;
+				}
+			}
+			&:active {
+				color: #4F28A5;
 			}
 		}
 
 	}		
 	&__search {
 		cursor: pointer;
+		outline: none;
+		path {
+			transition: 0.3s stroke ease;
+		}
+		@media (any-hover: hover){
+			&:hover{
+				path {
+					stroke: #AA9DFA;
+				}
+			}
+		}
+		&:focus {
+			path {
+				
+				stroke: #AA9DFA;
+			}
+		}
+		&:active {
+			path {
+				stroke: #4F28A5;
+			}
+		}
 	}
 	&__bottom {
 		&::-webkit-scrollbar {

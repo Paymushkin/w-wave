@@ -27,10 +27,11 @@ section.about
 				.list-item__poster
 				.list-item__title Татьяна Флеганова
 				.list-item__text Одна я в пальто стою красивая, а вокруг…
-		form(action="post").form-list
-			textarea#saysomething(name="saysomething", cols="30", rows="10", placeholder="Что скажете?").form-list__text
-			input(type="text", placeholder="Имя").form-list__name
-			input#email(type="email", name="email", placeholder="Email").form-list__email
+		form(method="post", action="/sendmail", data-dev).form-list
+			textarea#saysomething(name="saysomething", cols="30", rows="10", placeholder="Что скажете?", required).form-list__text
+			input(type="text", placeholder="Имя", required).form-list__name
+			.form-list__wrapper
+				input#email(type="email", name="email", placeholder="Email", data-required="email", data-error="Введен не верный E-mail", required).form-list__email
 			button.button.form-list__button(type="submit") Отправить
 			hr
 			.form-list__chx.chx
