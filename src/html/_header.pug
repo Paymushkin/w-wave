@@ -1,7 +1,10 @@
 header.header
 	.header__container
 		.header__top
-			img(src="@img/logo.svg", alt="w-wave logo").header__logo
+			picture
+				source(srcset="@img/logo-1.svg", media="(max-width: 320px)")
+				source(srcset="@img/logo.svg")
+				img(src="@img/logo.svg", alt="w-wave logo").header__logo
 			nav.header__menu.menu-nav(data-da=".header__bottom, 1024.98, first")
 				ul.menu-nav.menu-nav__list
 					li.menu-nav__item

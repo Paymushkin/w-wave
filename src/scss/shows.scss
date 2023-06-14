@@ -3,14 +3,17 @@
 		display: flex;
 		padding: rem(94) rem(15);		
 		@media (max-width:$tablet){
-			max-width: rem(824);
+			padding: rem(96) rem(15);
+			max-width: rem(854);
 		}
 		@media (max-width:$mobile){
 			  flex-direction: column-reverse;
-			  max-width: rem(540);
+			  max-width: rem(576);
+			  padding: rem(95) rem(15) 0;	
 		}
-		@media (max-width:$mobileSmall) {
-			padding: rem(54) rem(15);
+		@media (max-width:320px) {
+			padding: rem(54) 0 rem(25);
+			max-width: rem(256);
 		}
 	}
 	.shows {
@@ -20,23 +23,31 @@
 			justify-content: space-between;
 			align-items: flex-start;
 			flex: 1 1 auto;
-			margin-right: rem(30);
+			margin-right: rem(29);
 		}
 		&__list {
 			display: flex;
 			flex-wrap: wrap;
+			padding-top: rem(13);
+			@media (max-width:320px){
+				padding-top: 0;
+			}
 		}
 	}
 	.shows-content {
+		@media (max-width:320px){
+			margin-left: rem(-20);
+			max-width: rem(256);
+		}
 		&__title {
 			color: #121723;
 			font-size: rem(48);
 			@media (max-width:$mobile) {
 				display: block;
-				margin: 0 auto rem(123);
+				margin: 0 auto rem(110);
 				width: rem(540);
 			}
-			@media (max-width:$mobileSmall) {
+			@media (max-width:320px) {
 				margin-bottom: rem(30);
 				font-size: rem(24);
 			}
@@ -63,19 +74,24 @@
 		@media (max-width:$mobile){
 			  display: flex;
 			  align-items: center;
-			  padding: rem(30) 0;
+			  padding: rem(32) 0;
+		}
+		@media (max-width:320px){
+			padding: rem(29) 0;
+			max-width: rem(256);
 		}
 		&__img {
 			display: flex;
 			flex: 1 1 auto;
 			margin-bottom: rem(24);
-			max-width: rem(65);
+			max-width: rem(70);
 			@media (max-width:$mobile){
 				display: inline-block;
-				margin-right: rem(20);
+				margin-right: rem(24);
 				margin-bottom: 0;
 			}
-			@media (max-width:$mobileSmall) {
+			@media (max-width:320px) {
+				margin-right: rem(12);
 				flex: 0 0 rem(77);
 				min-width: rem(77);
 				// min-height: rem(105);
@@ -86,23 +102,27 @@
 			@media (max-width:$mobile) {
 				margin-bottom: rem(8);
 			}
-			@media (max-width:$mobileSmall) {
+			@media (max-width:320px) {
 				margin-bottom: 0;
+				padding: rem(7.5) rem(29);
+				font-size: rem(16);
 			}
 		}
 		&__text {
 			color: #A1A6B4;
 			font-size: rem(16);
 			line-height: 1.5;
-			max-width: rem(255);		
-			@media (max-width:$mobileSmall) {
+			max-width: rem(255);
+			// max-width: 100%;		
+			@media (max-width:320px) {
 				margin-bottom: rem(7);
+				width: auto;
 				font-size: rem(14);
 			}
 		}
 
 		&__wrap {
-			@media (max-width:$mobileSmall){
+			@media (max-width:320px){
 				display: flex;
 				flex-direction: column-reverse;
 				align-items: flex-start;
@@ -115,6 +135,9 @@
 			margin: 0 auto;
 			padding-bottom: rem(60);
 			max-width: rem(540);
+		}
+		@media (max-width:320px){
+			padding-bottom: rem(30);
 		}
 		&__item {
 			position: relative;
@@ -157,16 +180,26 @@
 		}
 	}
 	.list-item {
+		@media (max-width:320px){
+			min-height: rem(149);
+		}
 		&__desc {
 			display: flex;
 			flex-direction: column;
 			justify-content: center;
 			flex: 1 1 auto;
-			padding: rem(20) rem(16);
+			padding: rem(21) rem(15) rem(17);
 			width: 100%;
 			border: 1px solid #E6E8EC;
+			@media (max-width:$tablet){
+				padding: rem(20) rem(14) rem(17);
+			}
+			@media (max-width:$mobile){
+				padding: rem(20) rem(16) rem(17); 
+			}
 			@media (max-width:320px){
-				padding: rem(30) rem(16); 
+				justify-content: flex-start;
+				padding: rem(8) rem(10) rem(9); 
 			}
 		}
 		&__img {
@@ -179,23 +212,28 @@
 			// background-size: cover;
 			// background-position: center;
 			@media (max-width:320px){
-				min-height: rem(72);
+				min-height: rem(50);
 				width: 100%;
 				object-fit: cover;
 		    }
 		}
 		&__label {
-			margin-bottom: rem(4);
+			margin-bottom: rem(3);
 			font-weight: 500;
-			@media (max-width:$mobileSmall){
+			@media (max-width:$tablet){
+				margin-bottom: rem(4);
+			}
+			@media (max-width:320px){
+				margin-bottom: rem(5);
 				font-size: rem(12);
 			}
 		}
 		&__text {
-			margin-bottom: rem(20);
+			flex: 1 1 auto;
+			margin-bottom: rem(17);
 			color: #a1a684;
 			font-size: rem(12);
-			@media (max-width:$mobileSmall){
+			@media (max-width:320px){
 				font-size: rem(9);
 			}
 		}
@@ -225,7 +263,7 @@
 			path {
 				transition: 0.3s fill ease;
 			}
-			@media (max-width:$mobileSmall){
+			@media (max-width:320px){
 				font-size: rem(12);
 				color: #6D31EE;			
 				svg path {

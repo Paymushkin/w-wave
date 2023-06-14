@@ -1,11 +1,19 @@
 section.promo
 	.promo__container
-		img(src="@img/promo/radio.png", alt="Radio").promo__img
+		picture
+			source(srcset="@img/promo/radio-2.png", media="(max-width: 320px)")
+			source(srcset="@img/promo/radio-1.png", media="(max-width: 768px)")
+			source(srcset="@img/promo/radio.png", media="(min-width: 768px)")
+			source(srcset="@img/promo/radio.png")
+			img(src="@img/promo/radio.png", alt="Radio").promo__img
 		.promo__content.promo-content
 			h2.promo-content__title Будь с нами на одной волне!
-			img.promo-content__wave(src="@img/promo/wave.svg", alt="wave")
+			picture
+				source(srcset="@img/promo/wave-1.svg", media="(max-width: 320px)")
+				source(srcset="@img/promo/wave.svg")
+				img.promo-content__wave(src="@img/promo/wave.svg", alt="wave")
 			p.promo-content__text Друзья, рады представить вам продукт нашего производства! Да-да, несмотря на то, что мы только начали свой путь радиовещателей, нам хочется, чтобы вы могли как следует нас расслышать:)
-			p.promo-content__text Итак, встречайте! Портативный радиоприёмник-колонка W-Wave 1.0 xm. Тщательный подбор всех делатей, ручная сборка, качественный звук. Пока доступно только 60 штук в 3 цветах, но мы активно трудимся над новыми партиями и дизайном. Спешите приобрести!
+			p.promo-content__text.promo-content__text-last Итак, встречайте! Портативный радиоприёмник-колонка W-Wave 1.0 xm. Тщательный подбор всех делатей, ручная сборка, качественный звук. Пока доступно только 60 штук в 3 цветах, но мы активно трудимся над новыми партиями и дизайном. Спешите приобрести!
 			span.promo-content__price 2 800 ₽
 			button.button.button-buy.promo-content__button 
 				svg(width="21", height="20", viewBox="0 0 21 20", fill="none", xmlns="http://www.w3.org/2000/svg")
