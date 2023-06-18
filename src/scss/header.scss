@@ -24,6 +24,7 @@
 		margin-right: rem(80);
 		@media (max-width:$tablet){
 			max-height: rem(14);
+			transform: translateY(3px);
 	  	}
 		// @media (max-width:320px){
 		// 	max-height: rem(10);
@@ -39,10 +40,14 @@
 		}
 		&__list {
 			display: flex;
-			justify-content: space-between;
 			align-items: center;
+			width: 100%;
 			@media (min-width:$tablet){
-				 margin-right: rem(208); 
+				 margin-right: rem(50);
+				 flex-wrap: wrap;
+			}
+			@media (max-width:$tablet){
+				justify-content: space-between;
 			}
 			@media (max-width:$mobile){
 				 justify-content: flex-start; 
@@ -51,8 +56,13 @@
 		&__item {
 			cursor: pointer;
 			&:not(:last-child) {
-				margin-right: rem(32);
+				margin-right: rem(58.75);
 			}
+			// @media (max-width:$tablet){
+			// 	&:not(:last-child) {
+			// 		margin-right: rem(105.25);
+			// 	}
+			// }
 			@media (max-width:$mobile){
 				&:not(:last-child) {
 					margin-right: rem(56);
@@ -113,6 +123,7 @@
 
 	}		
 	&__search {
+		height: rem(24);
 		cursor: pointer;
 		outline: none;
 		// @media (max-width:$mobile){

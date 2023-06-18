@@ -5,26 +5,46 @@ section.about
 				h2.about-content__title О нас
 				span.about-content__text Приём-приём! Как слышно? Мы уже в эфире? Отлично, поехали!
 				p.about-content__desc Друзья, мы будем очень рады, если вы поможете стать нам лучше. Нам важен каждый слушатель, поэтому вы можете поделиться обратной связью о наших предеачах, темах, подборках и вообще обо всём! Это можно сделать либо написав нам в форме ниже, либо кликнув на наши соцсети в подвале сайта. Спасибо! Услышимся!:)
-			picture
-					source(srcset="@img/about/shape-2.svg", media="(max-width: 768px)")
-					source(srcset="@img/about/shape-1.svg", media="(max-width: 1024px)")
-					source(srcset="@img/about/shape.svg")
-					img(src="@img/about/shape.svg", alt="shape").about-top__img
+			//- picture
+			//- 		source(srcset="@img/about/shape-2.svg", media="(max-width: 768px)")
+			//- 		source(srcset="@img/about/shape-1.svg", media="(max-width: 1024px)")
+			//- 		source(srcset="@img/about/shape.svg")
+			//- 		img(src="@img/about/shape.svg", alt="shape").about-top__img
 		ul.about-list
 			li.about-list__item.list-item 
-				.list-item__poster
+				picture
+					source(srcset="@img/about/item-1-2.png", media="(max-width: 320px)")
+					source(srcset="@img/about/item-1-3.png", media="(max-width: 768px)")
+					source(srcset="@img/about/item-1-1.png", media="(max-width: 1024px)")
+					source(srcset="@img/about/item-1.png")
+					img(src="@img/about/item-1.png", alt="shape").list-item__poster
 				.list-item__title Дмитрий Гутенберг
 				.list-item__text Эксперт (ну, почти) по всем вопросам (почти)
 			li.about-list__item.list-item 
-				.list-item__poster
+				picture
+					source(srcset="@img/about/item-2-2.png", media="(max-width: 320px)")
+					source(srcset="@img/about/item-2-3.png", media="(max-width: 768px)")
+					source(srcset="@img/about/item-2-1.png", media="(max-width: 1024px)")
+					source(srcset="@img/about/item-2.png")
+					img(src="@img/about/item-2.png", alt="shape").list-item__poster
 				.list-item__title Анна Васильева
 				.list-item__text Как я здесь оказалась? А главное — зачем?
 			li.about-list__item.list-item 
-				.list-item__poster
+				picture
+					source(srcset="@img/about/item-3-2.png", media="(max-width: 320px)")
+					source(srcset="@img/about/item-3-3.png", media="(max-width: 768px)")
+					source(srcset="@img/about/item-3-1.png", media="(max-width: 1024px)")
+					source(srcset="@img/about/item-3.png")
+					img(src="@img/about/item-3.png", alt="shape").list-item__poster
 				.list-item__title Пётр Дмитриевский
 				.list-item__text Господа! Внимание! Благодарю за внимание!
 			li.about-list__item.list-item 
-				.list-item__poster
+				picture
+					source(srcset="@img/about/item-4-2.png", media="(max-width: 320px)")
+					source(srcset="@img/about/item-4-3.png", media="(max-width: 768px)")
+					source(srcset="@img/about/item-4-1.png", media="(max-width: 1024px)")
+					source(srcset="@img/about/item-4.png")
+					img(src="@img/about/item-4.png", alt="shape").list-item__poster
 				.list-item__title Татьяна Флеганова
 				.list-item__text Одна я в пальто стою красивая, а вокруг…
 		form(method="post", action="/sendmail", data-dev).form-list
@@ -34,7 +54,7 @@ section.about
 				input#email(type="email", name="email", placeholder="Email", data-required="email", data-error="Введен не верный E-mail", required).form-list__email
 			button.button.form-list__button(type="submit") Отправить
 			hr
-			.form-list__chx.chx
+			.form-list__chx.chx(tabindex="0")
 				input#chx-1(type="checkbox", name="agree", checked).chx__input
 				label(for="chx-1").chx__label Согласен на обработку персональных данных
 

@@ -69,26 +69,36 @@
 			}
 		}
 		&__img {
-
+			transform: translateX(2px);
+			@media (max-width:$mobileSmall){
+				transform: translateX(0);
+			}
 		}
 	}
 	.playlists-list {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
-		padding-top: rem(12);
+		// justify-content: space-between;
+		align-items: flex-start;
+		padding-top: rem(14);
 		@media (min-width:$tablet){
 			flex: 1 1 calc(100% - rem(350) - rem(30));  
 		}
+		@media (max-width:$tablet){
+			padding-top: rem(10);
+		}
+		@media (max-width:$mobile){
+			 padding-top: rem(12); 
+		}
 		@media (max-width:320px){
-			padding-top: rem(9);
+			padding-top: rem(11);
 		}
 		&__item {
 			display: flex;
 			@media (min-width:$tablet){
 				flex-direction: column;
-				flex: 1 1 calc(100% / 4 - rem(30));
-				width: calc(100% / 4 - rem(30));
+				flex: 0 1 calc((100% - rem(90)) / 4 );
+				width: calc((100% - rem(90)) / 4 );
 				&:not(:nth-child(4n+4)) {
 					margin-right: rem(30);
 				}
@@ -109,15 +119,15 @@
 			}
 			@media (max-width:476px){
 				flex-direction: column;
-				flex: 1 1 calc(100% / 2 - rem(30));
-				width: calc(100% / 2 - rem(30));
+				flex: 0 1 calc((100% - rem(30)) / 2);
+				width: calc((100% - rem(30)) / 2);
 				&:not(:nth-child(2n+2)) {
 					margin-right: rem(30);
 				}
 			}
 			@media (min-width:$tablet) {
 				&:not(:nth-last-child(-n+4)) {
-					margin-bottom: rem(28);
+					margin-bottom: rem(30);
 				}
 			}
 			@media (max-width:$tablet){
@@ -170,7 +180,7 @@
 			flex-direction: column;
 			justify-content: center;
 			flex: 1 1 auto;
-			padding: rem(16);
+			padding: rem(15);
 			border: 1px solid #E6E8EC;
 			@media (max-width:$tablet){
 				padding: rem(10) rem(8) rem(10) rem(9);

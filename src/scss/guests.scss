@@ -18,11 +18,14 @@
 	}
 	.guests-content {
 		&__title {
-			margin-bottom: rem(12);
+			margin-bottom: rem(10);
 			color: #fff;
 			font-size: rem(48);
 			@media (max-width:$tablet){
 				margin-bottom: rem(10);
+			}
+			@media (max-width:$mobile){
+				 margin-bottom: rem(12); 
 			}
 			@media (max-width:320px) {
 				margin-bottom: rem(12);
@@ -113,7 +116,10 @@
 				align-items: flex-start;
 				color: #A1A6B4;
 				font-size: rem(16);
-				line-height: 1.8;
+				line-height: 1.82;
+				@media (max-width:$tablet){
+					line-height: 1.8;
+				}
 			}
 			&__link {
 				align-self: flex-start;
