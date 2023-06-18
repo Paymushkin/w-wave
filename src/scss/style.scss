@@ -46,7 +46,8 @@ $containerWidth: $maxWidthContainer + $containerPadding;
 $pc: em($containerWidth); // ПК, ноутбука, некоторые планшеты в гор. положении
 $tablet: em(1024.98); // Планшеты, некоторые телефоны в гор.положении
 $mobile: em(768.98); // Телефоны L 
-$mobileSmall: em(480.98); // Телефоны S 
+$mobileMid: em(585.98); // Телефоны M
+$mobileSmall: em(320.98); // Телефоны S 
 
 // Обнуление и общие параметры
 @import "base/null";
